@@ -20,7 +20,10 @@
 
   <?php wp_head();?>
 
-
+<script src="https://www.google.com/recaptcha/api.js?render=6LeLyLQUAAAAADsFK1SVGR2TGwYUpyYO1yGz24K2"></script>
+<!-- mailchimp popup -->
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/856211006bffaf245aa55d7db/b30cea94fd112698d40be1a27.js");</script>
+<!-- End mailchimp popup -->
 </head>
 
 <body>
@@ -28,7 +31,6 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3VRJD3"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
@@ -41,24 +43,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<a href="<?= get_home_url(); ?>"><img class="logo" src="<?php echo $logo[0];?>" alt="logo"></a>
 		<h1 class="logo me-auto me-lg-0"><a href="<?= get_home_url(); ?>"><?php echo get_bloginfo('name'); ?></a></h1>
     	<nav id="navbar" class="navbar order-last order-lg-0" role="navigation">
-		      
-
-		 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location'  => 'primary',
-								'menu_class'      => 'menu-wrapper',
-								'container_class' => 'primary-menu-container',
-								'items_wrap'      => '<ul id="primary-menu-list" class="%2$s">%3$s</ul>',
-								'fallback_cb'     => false,
-							)
-						);
-						?>
-				
-				<?php endif; ?>
+	 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'primary',
+							'menu_class'      => 'menu-wrapper',
+							'container_class' => 'primary-menu-container',
+							'items_wrap'      => '<ul id="primary-menu-list" class="%2$s">%3$s</ul>',
+							'fallback_cb'     => false,
+						)
+					);
+					?>
+				<!-- #site-navigation -->
+			<?php endif; ?>
 			<i class="bi bi-list mobile-nav-toggle"></i>
-		</nav>
-       <a href="order" class="order-product-btn scrollto d-none d-lg-flex">Order Asuka Method At Home</a>
+		</nav><!-- .navbar -->
     </div>
   </header><!-- End Header -->
