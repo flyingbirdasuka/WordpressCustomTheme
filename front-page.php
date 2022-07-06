@@ -1,11 +1,9 @@
 <?php get_header(); ?>
-    
-        <?php 
-        $id = 10; 
+    <?php 
+        $id = 10; // add the ID of the page where the zero is
 		$p = get_page($id);
 		echo apply_filters('the_content', $p->post_content);
-
-        ?>   
+    ?>   
 
 <?php
 	$id = 77; 
