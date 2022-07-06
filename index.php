@@ -1,4 +1,3 @@
 <?php 
-the_posts_pagination();
-
+	the_posts_pagination();
 ?>
